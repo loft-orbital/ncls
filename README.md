@@ -1,3 +1,12 @@
+> This project was forked from https://github.com/pyranges/ncls to update the build system:
+> - Upgrade cibuildwheel to v2.22.0, enabling CPython 3.13 build
+> - Remove builds for Windows, MacOS and any CPython version other than 3.11, 3.12, 3.13
+> - Publish the package to Loft's Gemfury repository instead of the public Pypi
+>
+> A [pull request](https://github.com/pyranges/ncls/pull/58) was submitted to the
+> original repository to update the build system. When it is merged, this fork can be
+> archived and projects using this lib can switch back to the public Pypi version.
+
 # Nested containment list
 
 [![Build Status](https://travis-ci.org/biocore-ntnu/ncls.svg?branch=master)](https://travis-ci.org/hunt-genes/ncls) [![PyPI version](https://badge.fury.io/py/ncls.svg)](https://badge.fury.io/py/ncls)
