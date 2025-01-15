@@ -1,10 +1,16 @@
-import numpy as np
-import pkg_resources
+from importlib.metadata import PackageNotFoundError, version
 
-__version__ = pkg_resources.get_distribution("ncls").version
+import numpy as np
 
 from ncls.src.ncls import NCLS64  # type: ignore
 from ncls.src.ncls32 import NCLS32  # type: ignore
+
+__version__: str
+
+try:
+    __version__ = version(__package__)
+except PackageNotFoundError:
+    __version__ = "dev"
 
 
 def NCLS(starts, ends, ids):
